@@ -1,0 +1,378 @@
+{
+  "users": [
+    {
+      "id": "usr-admin",
+      "name": "Dr. Rajesh Kumar",
+      "email": "admin@hostel.com",
+      "phone": "+91 98765 43210",
+      "role": "admin",
+      "passwordHash": "admin",
+      "isVerified": true,
+      "createdAt": "2026-07-06T17:19:54.295Z"
+    },
+    {
+      "id": "usr-warden",
+      "name": "Mr. Suresh Sharma",
+      "email": "warden@hostel.com",
+      "phone": "+91 87654 32109",
+      "role": "warden",
+      "department": "Warden Office",
+      "year": "Staff",
+      "createdAt": "2026-07-06T17:19:54.295Z",
+      "passwordHash": "warden",
+      "isVerified": true
+    },
+    {
+      "id": "usr-student-1",
+      "name": "Ananya Roy",
+      "email": "student@hostel.com",
+      "phone": "+91 76543 21098",
+      "role": "student",
+      "department": "Computer Science & Engineering",
+      "year": "Final Year",
+      "gender": "Female",
+      "roomNumber": "B-302",
+      "createdAt": "2026-07-06T17:19:54.295Z",
+      "passwordHash": "student",
+      "isVerified": true
+    },
+    {
+      "id": "usr-611557",
+      "name": "anushiya",
+      "email": "anushiyad327@gmail.com",
+      "phone": "9385589474",
+      "role": "student",
+      "department": "it",
+      "year": "First Year",
+      "gender": "Female",
+      "passwordHash": "anu@@@",
+      "isVerified": true,
+      "createdAt": "2026-07-06T17:23:31.557Z"
+    }
+  ],
+  "rooms": [
+    {
+      "id": "rm-101",
+      "roomNumber": "A-101",
+      "block": "A",
+      "capacity": 2,
+      "occupied": 0,
+      "status": "available",
+      "students": []
+    },
+    {
+      "id": "rm-102",
+      "roomNumber": "A-102",
+      "block": "A",
+      "capacity": 2,
+      "occupied": 0,
+      "status": "maintenance",
+      "students": []
+    },
+    {
+      "id": "rm-302",
+      "roomNumber": "B-302",
+      "block": "B",
+      "capacity": 3,
+      "occupied": 1,
+      "status": "available",
+      "students": [
+        "usr-student-1"
+      ]
+    },
+    {
+      "id": "rm-303",
+      "roomNumber": "B-303",
+      "block": "B",
+      "capacity": 3,
+      "occupied": 0,
+      "status": "available",
+      "students": []
+    }
+  ],
+  "complaints": [
+    {
+      "id": "comp-1",
+      "studentId": "usr-student-1",
+      "studentName": "Ananya Roy",
+      "roomNumber": "B-302",
+      "title": "Water dripping from bathroom pipe",
+      "description": "There is an active leak in the ceiling piping of room B-302's bathroom. It drips continuously and has pooled water on the floor, posing a slip risk.",
+      "category": "Plumbing",
+      "priority": "high",
+      "status": "assigned",
+      "department": "Maintenance - Plumbing",
+      "summary": "Bathroom leak causing wet floor; assigned to plumber Ramesh. Priority high due to slip risk.",
+      "assignedTo": "Ramesh Sharma (Plumber)",
+      "createdAt": "2026-07-05T17:19:54.295Z"
+    },
+    {
+      "id": "comp-2",
+      "studentId": "usr-student-1",
+      "studentName": "Ananya Roy",
+      "roomNumber": "B-302",
+      "title": "Slow internet speeds & dropouts",
+      "description": "The wifi router closest to room B-302 frequently drops connection. When active, download speeds are under 1Mbps.",
+      "category": "IT & Network",
+      "priority": "medium",
+      "status": "pending",
+      "department": "Infrastructure - IT",
+      "summary": "Unstable Wi-Fi in block B, corridor 3rd floor. Connection drops repeatedly.",
+      "createdAt": "2026-07-06T15:19:54.295Z"
+    },
+    {
+      "id": "comp-7565",
+      "studentId": "usr-611557",
+      "studentName": "anushiya",
+      "roomNumber": "Not Allocated",
+      "title": "light",
+      "description": "light ",
+      "category": "General Maintenance",
+      "priority": "medium",
+      "status": "pending",
+      "department": "Maintenance Cell",
+      "summary": "light",
+      "createdAt": "2026-07-06T17:24:47.567Z"
+    }
+  ],
+  "leaves": [
+    {
+      "id": "lv-1",
+      "studentId": "usr-student-1",
+      "studentName": "Ananya Roy",
+      "roomNumber": "B-302",
+      "startDate": "2026-07-07",
+      "endDate": "2026-07-09",
+      "reason": "Attending sister's wedding ceremony in Kolkata.",
+      "letterText": "Respected Warden,\n\nI am writing to formally request leave from the hostel starting tomorrow for a period of three days. I need to travel home to Kolkata to attend my sister's wedding ceremony, which is a major family event requiring my presence.\n\nI will make sure to catch up on any missed academic classes and return to the hostel promptly. I request you to kindly approve my leave and issue a gate pass.\n\nYours sincerely,\nAnanya Roy\nCSE Department",
+      "status": "pending",
+      "createdAt": "2026-07-06T17:19:54.295Z"
+    },
+    {
+      "id": "lv-0895",
+      "studentId": "usr-611557",
+      "studentName": "anushiya",
+      "roomNumber": "Not Allocated",
+      "startDate": "2026-04-23",
+      "endDate": "2026-04-25",
+      "reason": "Food poison",
+      "letterText": "Respected Warden,\n\nI need to apply for hostel leave from 2026-04-23 to 2026-04-25 because of Food poison. Kindly approve.\n\nSincerely,\nanushiya",
+      "status": "pending",
+      "createdAt": "2026-07-06T17:24:20.895Z"
+    }
+  ],
+  "visitors": [
+    {
+      "id": "vis-1",
+      "studentId": "usr-student-1",
+      "studentName": "Ananya Roy",
+      "roomNumber": "B-302",
+      "visitorName": "Sunita Roy",
+      "relation": "Mother",
+      "visitDate": "2026-07-08",
+      "purpose": "Bringing home-cooked food and checking in on academic health.",
+      "qrCode": "VIS-PASS-SUNITA-ROY-B302",
+      "status": "approved",
+      "approvedBy": "Mr. Suresh Sharma",
+      "createdAt": "2026-07-06T05:19:54.295Z"
+    },
+    {
+      "id": "vis-5309",
+      "studentId": "usr-611557",
+      "studentName": "anushiya",
+      "roomNumber": "Not Allocated",
+      "visitorName": "Sumathi",
+      "relation": "mother",
+      "visitDate": "2026-02-23",
+      "purpose": "health issue",
+      "qrCode": "VIS-PASS-vis-5309",
+      "status": "pending",
+      "createdAt": "2026-07-06T17:25:35.309Z"
+    }
+  ],
+  "fees": [
+    {
+      "id": "fee-1",
+      "studentId": "usr-student-1",
+      "studentName": "Ananya Roy",
+      "roomNumber": "B-302",
+      "amount": 45000,
+      "dueDate": "2026-07-25",
+      "status": "pending",
+      "category": "hostel"
+    },
+    {
+      "id": "fee-2",
+      "studentId": "usr-student-1",
+      "studentName": "Ananya Roy",
+      "roomNumber": "B-302",
+      "amount": 15000,
+      "dueDate": "2026-07-15",
+      "status": "pending",
+      "category": "mess"
+    },
+    {
+      "id": "fee-3",
+      "studentId": "usr-student-1",
+      "studentName": "Ananya Roy",
+      "roomNumber": "B-302",
+      "amount": 5000,
+      "dueDate": "2026-01-10",
+      "status": "paid",
+      "category": "caution",
+      "paidAt": "2026-01-08T10:00:00.000Z"
+    },
+    {
+      "id": "fee-1562a",
+      "studentId": "usr-611557",
+      "studentName": "anushiya",
+      "roomNumber": "Pending Allocation",
+      "amount": 45000,
+      "dueDate": "2026-08-05",
+      "status": "pending",
+      "category": "hostel"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-welcome-1566",
+      "userId": "usr-611557",
+      "title": "Account Registered Successfully",
+      "message": "Welcome, anushiya! Your account has been created successfully. Welcome to the Smart AI Hostel Portal.",
+      "type": "success",
+      "isRead": false,
+      "createdAt": "2026-07-06T17:23:31.566Z"
+    },
+    {
+      "id": "notif-1",
+      "userId": "all",
+      "title": "Annual Sports Day Registrations",
+      "message": "Registrations for the Annual Hostel Sports Tournament are now open. Register at the warden office before July 10.",
+      "type": "info",
+      "isRead": false,
+      "createdAt": "2026-07-06T12:19:54.295Z"
+    },
+    {
+      "id": "notif-2",
+      "userId": "usr-student-1",
+      "title": "Visitor Pass Approved",
+      "message": "Your visitor pass request for Mrs. Sunita Roy (Mother) has been APPROVED by Warden Suresh Sharma.",
+      "type": "success",
+      "isRead": false,
+      "createdAt": "2026-07-06T05:19:54.295Z"
+    },
+    {
+      "id": "notif-3",
+      "userId": "usr-student-1",
+      "title": "Hostel Fee Pending",
+      "message": "Friendly reminder: Your Hostel Admission Fee of ₹45,000 is due on July 25, 2026.",
+      "type": "warning",
+      "isRead": false,
+      "createdAt": "2026-07-05T17:19:54.295Z"
+    }
+  ],
+  "chats": [
+    {
+      "id": "ch-usr-611557",
+      "userId": "usr-611557",
+      "messages": [
+        {
+          "role": "model",
+          "content": "Hello! I am your AI Hostel Assistant. 🎓⭐\n\nI can help you:\n- 📝 Write and submit Leave Letters\n- 🛠️ File Maintenance complaints (with auto priority classification)\n- 🚪 Book Visitor Passes\n- ⏰ Check Curfew rules and fee timings\n\nHow can I help you today?",
+          "timestamp": "2026-07-06T17:23:31.965Z"
+        },
+        {
+          "role": "user",
+          "content": "Hiii",
+          "timestamp": "2026-07-06T17:23:50.286Z"
+        },
+        {
+          "role": "model",
+          "content": "Hello! I am your AI Hostel Assistant. You can ask me to file a complaint, generate a leave letter, register visitors, or ask questions about hostel rules, timings, fees, and mess menu.\n\n*Try saying: \"I need leave for 2 days\" or \"Water is leaking in my room B-302\".*",
+          "timestamp": "2026-07-06T17:23:50.289Z"
+        }
+      ],
+      "updatedAt": "2026-07-06T17:23:50.289Z"
+    }
+  ],
+  "messMenu": {
+    "Monday": {
+      "breakfast": "Idli, Vada, Sambhar, Chutney, Tea & Coffee",
+      "lunch": "Rice, Dal Fry, Kadai Paneer, Chapati, Curd, Salad",
+      "snacks": "Samosa, Mint Chutney, Tea",
+      "dinner": "Jeera Rice, Butter Roti, Mixed Veg, Dal Tadka, Kheer"
+    },
+    "Tuesday": {
+      "breakfast": "Aloo Paratha, Butter, Pickle, Curd, Tea & Coffee",
+      "lunch": "Veg Biryani, Raita, Chole Masala, Bhature, Salad",
+      "snacks": "Poha, Sev, Tea",
+      "dinner": "Rice, Chapati, Paneer Bhurji, Dal Mong, Gulab Jamun"
+    },
+    "Wednesday": {
+      "breakfast": "Puri Bhaji, Halwa, Sprouts, Tea & Coffee",
+      "lunch": "Jeera Rice, Roti, Rajma Masala, Aloo Gobi, Curd",
+      "snacks": "Veg Cutlet, Tomato Sauce, Tea",
+      "dinner": "Rice, Chapati, Chicken Curry / Shahi Paneer, Dal, Ice Cream"
+    },
+    "Thursday": {
+      "breakfast": "Bread Butter Jam, Veg Cutlet, Boiled Eggs / Fruits, Tea",
+      "lunch": "Rice, Chapati, Veg Kofta, Dal Makhani, Curd, Salad",
+      "snacks": "Aloo Bonda, Green Chutney, Tea",
+      "dinner": "Kashmiri Pulao, Butter Roti, Palak Paneer, Dal Fry, Custard"
+    },
+    "Friday": {
+      "breakfast": "Uttapam, Coconut Chutney, Sambhar, Tea & Coffee",
+      "lunch": "Rice, Butter Roti, Veg Jalfrezi, Yellow Dal, Fruit Raita",
+      "snacks": "Bread Pakora, Tea",
+      "dinner": "Egg Curry / Kadai Mushroom, Rice, Chapati, Dal, Jalebi"
+    },
+    "Saturday": {
+      "breakfast": "Masala Dosa, Sambhar, Tomato Chutney, Tea & Coffee",
+      "lunch": "Rice, Roti, Soyabean Masala, Dal Tadka, Papad, Salad",
+      "snacks": "Dhokla, Tea",
+      "dinner": "Veg Fried Rice, Manchurian, Spring Rolls, Ice Cream"
+    },
+    "Sunday": {
+      "breakfast": "Chola Bhatura, Pickle, Sweet Lassi, Fruits",
+      "lunch": "Special Veg Thali: Shahi Paneer, Dal Makhani, Pulao, Butter Naan",
+      "snacks": "Kachori, Tea",
+      "dinner": "Special Chicken Biryani / Paneer Biryani, Mirchi Ka Salan, Raita"
+    }
+  },
+  "messFeedback": [
+    {
+      "id": "fb-1",
+      "studentId": "usr-student-1",
+      "studentName": "Ananya Roy",
+      "rating": 5,
+      "comment": "The Sunday Special Veg Thali and Biryani was absolutely stellar!",
+      "createdAt": "2026-07-03T17:19:54.295Z"
+    },
+    {
+      "id": "fb-2",
+      "studentId": "usr-student-1",
+      "studentName": "Ananya Roy",
+      "rating": 4,
+      "comment": "The Wednesday Paneer was really good, but please reduce the oil content slightly.",
+      "createdAt": "2026-07-04T17:19:54.295Z"
+    }
+  ],
+  "notices": [
+    {
+      "id": "nt-1",
+      "title": "Hostel Fee Payment Deadline Approaching",
+      "content": "All students are requested to clear their Semester Hostel and Mess Fees on or before July 25, 2026. Late fees will apply after the deadline. Please pay online via the student portal or submit a draft at the accounts section.",
+      "createdBy": "Dr. Rajesh Kumar (Chief Admin)",
+      "createdAt": "2026-07-04T17:19:54.295Z",
+      "priority": "urgent"
+    },
+    {
+      "id": "nt-2",
+      "title": "Maintenance Work: B-Block Water Pipe Line Upgrade",
+      "content": "Please note that water supply in B-Block will be partially affected on Sunday, July 5, between 10 AM and 2 PM due to main pipeline upgrading works. Please store water in advance. We regret the temporary inconvenience.",
+      "createdBy": "Mr. Suresh Sharma (Warden)",
+      "createdAt": "2026-07-06T05:19:54.295Z",
+      "priority": "normal"
+    }
+  ]
+}

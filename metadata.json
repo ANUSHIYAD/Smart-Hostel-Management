@@ -1,0 +1,6 @@
+{
+  "name": "Hostel Management AI Agent",
+  "description": "A luxury, modern AI-powered Hostel Management system with student and warden dashboards, automated leaves, and an intelligent rule and complaint assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Hostel Management</title>
+    <script>
+      // Suppress benign Vite WebSocket and HMR errors/rejections in the sandbox
+      window.addEventListener('unhandledrejection', function(event) {
+        if (event.reason && (
+          (event.reason.message && event.reason.message.indexOf('WebSocket') !== -1) ||
+          (event.reason.message && event.reason.message.indexOf('vite') !== -1) ||
+          String(event.reason).indexOf('WebSocket') !== -1 ||
+          String(event.reason).indexOf('vite') !== -1
+        )) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        }
+      });
+      window.addEventListener('error', function(event) {
+        if (event.message && (
+          event.message.indexOf('WebSocket') !== -1 ||
+          event.message.indexOf('vite') !== -1
+        )) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+        }
+      }, true);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
